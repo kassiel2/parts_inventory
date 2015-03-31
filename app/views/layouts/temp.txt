@@ -1,0 +1,8 @@
+  <script src="//cdn.shopify.com/s/assets/external/app.js?<%= Time.now.strftime('%Y%m%d%H') %>"></script>
+  <script type="text/javascript">
+      ShopifyApp.init({
+          apiKey: "e9397fe168f2cfddb8b9130fdbd77811",  // Expects: 32 character API key string like ff9b1d04414785029e066f8fd0465d00
+          shopOrigin: "<%= "https://#{ @shop_session.url }" if @shop_session %>",  // Expects: https://exampleshop.myshopify.com
+          debug: true
+      });
+  </script>
