@@ -50,3 +50,5 @@ group :development, :test do
   gem 'less-rails-bootstrap'
   gem 'therubyracer', platforms: :ruby
 end
+
+ruby '2.0.0'

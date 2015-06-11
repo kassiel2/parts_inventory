@@ -20,4 +20,4 @@
 #   end
 # end
 
-ShopifySessionRepository.storage = InMemorySessionStore
+ShopifySessionRepository.storage = 'Shop'
