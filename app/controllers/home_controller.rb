@@ -9,17 +9,19 @@ class HomeController < ApplicationController
   
   def index
     # get 10 products
-    @products = ShopifyAPI::Product.find(:all, :params => {:limit => 10})
+    @products = ShopifyAPI::Product.find(:all, :params => {:limit => 5})
+    puts "products: #{@products[0]}"
 
     # get latest 5 orders
     @orders   = ShopifyAPI::Order.find(:all, :params => {:limit => 5, :order => "created_at DESC" })
   end
 
   def parts
-
+    @product = ShopifyAPI::Product.find(377267245)
+    @parts = 'hello this is where parts inventory will go'
   end
 
   def help
-
+    puts 'help'
   end
 end
