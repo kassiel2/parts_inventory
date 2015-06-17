@@ -1,0 +1,15 @@
+<%= form_tag('options', method: 'get', remote: true, class: 'form-horizontal', id: 'traits-form-tag') do %>
+    <!--<form class="form-horizontal">-->
+    <div class="control-group">
+      <!--<label class="control-label" for="option-name">Option:</label>-->
+      <div class="controls">
+        <%= label_tag('trait-name', 'Trait:') %>
+        <!--<input type="text" class="span2" id="option-name-textfield">-->
+        <%= text_field_tag('trait-name-textfield', @trait_names.first, placeholder: 'trait name', class: 'span2', onkeyup: 'switchTraitForm("trait-name-textfield", "traits-form-tag")') %>
+        <%= select_tag('trait-select', options_for_select( @trait_names), class: 'span1', onchange: 'comboBox("trait-name-textfield", "trait-select")') %>
+        <%= submit_tag('Load Options', id: 'trait-submit') %>
+        <p id="testing"></p>
+        <p id="contains"></p>
+      </div>
+    </div>
+<% end %>

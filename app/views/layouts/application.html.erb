@@ -19,10 +19,6 @@
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-
-  <%= stylesheet_link_tag 'application' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
 </head>
 
 <body>
@@ -44,7 +40,8 @@
             <ul class="nav">
               <li class='<%= active_nav_class('home', 'index') %>'><%= link_to 'Where to Start', '/' %></li>
               <li class='<%= active_nav_class('home', 'design') %>'><%= link_to 'Bootstrap Info', '/design' %></li>
-              <li class='<%= active_nav_class('home', 'parts') %>'><%= link_to 'Parts Inventory', '/parts' %></li>
+              <li class='<%= active_nav_class('parts', 'parts') %>'><%= link_to 'Parts Inventory', '/parts' %></li>
+              <li class='<%= active_nav_class('parts', 'traits') %>'><%= link_to 'Attribute Inventory', '/traits' %></li>
             </ul>
           </div>
           

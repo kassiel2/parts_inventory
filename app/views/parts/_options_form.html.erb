@@ -1,0 +1,11 @@
+
+
+<%= label_tag('trait-label', 'Trait: '+@trait.name) %>
+<%= label_tag('option-name', 'Options:') %>
+<% if @option_names %>
+    <% @option_names.each_with_index do |option, index| %>
+        <div class="control-group">
+            <%= text_field_tag(option+'-option-textfield', option, placeholder: 'option name', class: 'span2') %>
+        </div>
+    <% end %>
+<% end %>

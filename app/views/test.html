@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shopify Demo App</title>
+    <link rel="stylesheet" media="screen" href="/assets/application-c1b5bd3970cdfb294534688151f7ee56.css?body=1" />
+    <link rel="stylesheet" media="screen" href="/assets/twitter/bootstrap-5df18a7b05170f0aa3303d1a0784e022.css?body=1" />
+    <link rel="stylesheet" media="screen" href="/assets/imports-6b991f0f7799c84a4ca5bca6a1d16e87.css?body=1" />
+    <link rel="stylesheet" media="screen" href="/assets/shopify_app_buttons-fcce2aad11e4a4cfa33e772f0573a439.css?body=1" />
+    <link rel="stylesheet" media="screen" href="/assets/shopify_app-80746c1c84102d9af0a8bad4361269ee.css?body=1" />
+    <script src="/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1"></script>
+    <script src="/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1"></script>
+    <script src="/assets/twitter/bootstrap/affix-883d4acef4763d9fd551d49e1ad7cdd3.js?body=1"></script>
+    <script src="/assets/twitter/bootstrap/alert-5a147fe98bcfc50127491fd718072676.js?body=1"></script>
+    <script src="/assets/twitter/bootstrap/button-50844329b59def4beb690ef3019b42fa.js?body=1"></script>
+    <script src="/assets/twitter/bootstrap/carousel-74ac91405b8ff7880b7332ac727ea374.js?body=1"></script>
+    <script src="/assets/twitter/bootstrap/collapse-90c0a8ac6e00d25b535d2a5dc85ca461.js?body=1"></script>
+    <script src="/assets/twitter/bootstrap/dropdown-65e25b7d3413a70c1f04b56c00bf326e.js?body=1"></script>
+    <script src="/assets/twitter/bootstrap/modal-77e7d9ee509770325ff2b27abec40949.js?body=1"></script>
+    <script src="/assets/twitter/bootstrap/tooltip-280da9de9516bac8c2381aa43d1850dd.js?body=1"></script>
+    <script src="/assets/twitter/bootstrap/popover-2d71f1be921b37b530cea03139d73d69.js?body=1"></script>
+    <script src="/assets/twitter/bootstrap/scrollspy-f38a95cbd6bd6eba9b793204715788d6.js?body=1"></script>
+    <script src="/assets/twitter/bootstrap/tab-b22533fdee79e5069be0e9ab5dfb4976.js?body=1"></script>
+    <script src="/assets/twitter/bootstrap/transition-941302a38663bdb61642288014145e67.js?body=1"></script>
+    <script src="/assets/twitter/bootstrap/typeahead-8a0ebac54f32cdea862de10aac73ebae.js?body=1"></script>
+    <script src="/assets/twitter/bootstrap-2cf6e9a543e4c83b40b3107e8756f84a.js?body=1"></script>
+    <script src="/assets/application-aaa5782d7c9bd39933edc01a8ec4f7e2.js?body=1"></script>
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="re4yTXnpCVzuRUwn9dfpG4bovoJai2fBITw4DgZ194/YafVM8R/wDNweOqFTbxg2hgBUYErmCSS3DQqoccmSKw==" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- icons -->
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/shopify-57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/shopify-72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/shopify-114.png">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <a class="brand" href="/">Shopify Demo App</a>
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class=''><a href="/">Where to Start</a></li>
+                    <li class=''><a href="/design">Bootstrap Info</a></li>
+                    <li class=''><a href="/parts">Parts Inventory</a></li>
+                    <li class='active'><a href="/options">Options Inventory</a></li>
+                </ul>
+            </div>
+
+            <ul class="nav pull-right">
+                <li class="dropdown">
+                    <a class="shop_name dropdown-toggle" data-toggle="dropdown" data-target="#" href="https://american-parkour-store.myshopify.com">american-parkour-store.myshopify.com <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a target="blank" href="http://american-parkour-store.myshopify.com"><i class="icon-home"></i> Storefront</a></li>
+                        <li><a target="blank" href="http://american-parkour-store.myshopify.com/admin"><i class="icon-cog"></i> Shopify Admin</a></li>
+                        <li class="divider"></li>
+                        <li><a rel="nofollow" data-method="delete" href="/logout"><i class="icon-off"></i> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <div class="content">
+        <script type="text/javascript">
+            window.mainPageTitle = 'Options Page';
+
+            ShopifyApp.ready(function(){
+                ShopifyApp.Bar.setTitle(window.mainPageTitle);
+                ShopifyApp.Bar.loadingOff();
+            });
+        </script>
+
+        <header class="jumbotron">
+            <div class="inner">
+                <div class="container">
+                    <h1 style="letter-spacing:-3px; margin-bottom:20px;">Parts Iventory!</h1>
+                    <p class="lead">Here I will be able to control the inventory options
+                </div><!-- /container -->
+            </div>
+        </header>
+        <body>hello world!
+        <p>options go here</p>
+
+        <h2>Manage Options</h2>
+        <div class="row">
+            <div class="span8">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="control-group">
+                            <label class="control-label" for="option_name">Option:</label>
+                            <div class="controls">
+                                <select id="option_name">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-default">Action</button>
+            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+
+        </body>
+
+    </div>
+
+    <footer>
+        <p>A Shopify app by (company name here)</p>
+    </footer>
+
+</div> <!-- /container -->
+</body>
+</html>

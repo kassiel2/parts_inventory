@@ -16,11 +16,6 @@ class HomeController < ApplicationController
     @orders   = ShopifyAPI::Order.find(:all, :params => {:limit => 5, :order => "created_at DESC" })
   end
 
-  def parts
-    @product = ShopifyAPI::Product.find(377267245)
-    @parts = 'hello this is where parts inventory will go'
-  end
-
   def help
     puts 'help'
   end

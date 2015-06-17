@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   get 'welcome' => 'home#welcome'
   get 'design' => 'home#design'
-  get 'parts' => 'home#parts'
+  get 'parts' => 'parts#parts'
+  get 'traits' => 'parts#traits'
   get 'help' => 'home#help'
+  get 'options' => 'parts#options'
+  post 'add_trait' => 'parts#add_trait'
   controller :sessions do
     get 'login' => :new
     post 'login' => :create

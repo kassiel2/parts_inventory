@@ -1,0 +1,102 @@
+<script type="text/javascript">
+    window.mainPageTitle = 'Options Page';
+
+//    ShopifyApp.ready(function(){
+//        ShopifyApp.Bar.setTitle(window.mainPageTitle);
+//        ShopifyApp.Bar.loadingOff();
+//    });
+
+//    textfield = document.getElementById("option-name-textfield");
+//    contentselect = document.getElementById("option-name");
+//
+//    if(contentselect != null) {
+//        contentselect.onchange = function () {
+//            var text = contentselect.options[contentselect.selectedIndex].value
+//            if (text != "") {
+//                textfield.value = text;
+//            }
+//        }
+//    }
+    function comboBox(textField, select) {
+        textfield = document.getElementById(textField);
+        contentselect = document.getElementById(select);
+
+//        contentselect.onchange = function () {
+            var text = contentselect.options[contentselect.selectedIndex].value
+            if (text != "") {
+                textfield.value = text;
+            }
+            testing = document.getElementById('testing');
+            testing.innerHTML = 'in comboBox <%= @traits %> value: ' + textfield.value
+//        }
+    }
+
+    function contains(a, obj) {
+        for (var i = 0; i < a.length; i++) {
+            if (a[i] === obj) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function switchTraitForm(textFieldName, formName) {
+        textfield = document.getElementById(textFieldName)
+        form = document.getElementById(formName);
+        testing = document.getElementById('testing');
+        submit = document.getElementById('trait-submit');
+        testing.innerHTML = formName;
+
+        if (contains(<%= raw @trait_names %>, textfield.value)) {
+            form.action = 'options'
+            form.method = 'get'
+            testing.value = 'changing to get'
+            submit.value="Load Options"
+            testing.innerHTML = 'in contains <%= @trai_namess %> value: ' + textfield.value
+        }
+        else {
+            form.action = 'add_trait'
+            form.method = 'post'
+            testing.value = 'changing to post'
+            submit.value="Save Trait"
+            testing.innerHTML = 'in not contains <%= @trait_names %> value: ' + textfield.value
+        }
+    }
+
+//    $(document).ready ->
+//        $("#options")
+//                .on("ajax:success", (e, data, status, xhr) -> $("#options").append xhr.responseText)
+//                .on "options:error", (e, xhr, status, error) -> $("#options").append "<p>ERROR</p>"
+</script>
+
+<header class="jumbotron">
+  <div class="inner">
+    <div class="container">
+      <h1 style="letter-spacing:-3px; margin-bottom:20px;">Parts Iventory!</h1>
+      <p class="lead">Here I will be able to control the inventory options
+    </div><!-- /container -->
+  </div>
+</header>
+<body>hello world!
+<p><%= @options %></p>
+
+<h2>Manage Options</h2>
+<div class="row">
+  <div class="span8">
+    <div id="traits-form" style="display:none;"></div>
+    <div id="options-form" style="display:none;"></div>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-default" >Action</button>
+  <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+</body>
